@@ -11,34 +11,43 @@
         return $sum;
     }
 
-    // function substract(...$numbers)
-    // {
-    //     $substraction = $numbers[0];
-    //     foreach ($numbers as $n) {
-    //         $substraction -= $n;
-    //     }
-    //     return $substraction;
-    // }
+    //minus
+    function substract($base, ...$numbers)
+    {
+        $substraction = $base;
+        foreach ($numbers as $n) {
+            $substraction -= $n;
+        }
+        return $substraction;
+    }
 
-    // function multiply(...$numbers)
-    // {
-    //     $multiplication = 0;
-    //     foreach ($numbers as $n) {
-    //         $multiplication *= $n;
-    //     }
-    //     return $multiplication;
-    // }
+    //echo(substract(200,50,22)); //128
 
-    // function divide(...$numbers)
-    // {
-    //     $division = 0;
-    //     foreach ($numbers as $n) {
-    //         $division /= $n;
-    //     }
-    //     return $division;
-    // }
+    //multiply
 
-    // echo substract(100,10,4);
+    function multiply($base, ...$numbers)
+    {
+        $multiplication = $base;
+        foreach ($numbers as $n) {
+            $multiplication *= $n;
+        }
+        return $multiplication;
+    }
+
+    //echo(multiply(2,5,-250)); //-2500
+
+    //divide
+
+    function divide($base,...$numbers)
+    {
+        $division = $base;
+        foreach ($numbers as $n) {
+            $division /= $n;
+        }
+        return $division;
+    }
+
+    //echo divide(100,8.8568,4);
 
     //add single digits together
 
@@ -52,13 +61,15 @@
     }
 
 
-    //areas & volume
+    //areas & volumes
 
+    //area (of a square)
     function calculateArea($height, $width)
     {
         $result = $height * $width;
         return $result;
     }
+    //volume(of a cube)
     function calculateVolume($height, $width, $deep)
     {
         $depth = $height * $width * $deep;
